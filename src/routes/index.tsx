@@ -405,35 +405,41 @@ function Index() {
                 )}
               </div>
             </GlassCard>
-            <div className="space-y-4">
-              {education.map((item, index) => (
-                <GlassCard key={item.label} className="relative overflow-hidden">
-                  <div className="absolute left-0 top-0 h-full w-1 bg-accent-bio" />
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
-                      <GraduationCap className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">
-                        {item.time} · Step {index + 1}
-                      </p>
-                      <h3 className="mt-1 text-xl font-bold">{item.label}</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        {item.place} — {item.detail}
-                      </p>
-                    </div>
-                  </div>
-                </GlassCard>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="research" className="bg-surface px-5 py-24 md:px-8">
+      <section id="education" className="bg-surface px-5 py-24 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Education" title="Academic foundation in life sciences." />
+          <div className="grid gap-4 md:grid-cols-2">
+            {education.map((item) => (
+              <GlassCard key={item.label} className="relative overflow-hidden">
+                <div className="absolute left-0 top-0 h-full w-1 bg-accent-bio" />
+                <div className="flex gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
+                    <GraduationCap className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">
+                      {item.time}
+                    </p>
+                    <h3 className="mt-1 text-xl font-bold">{item.label}</h3>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {item.place} — {item.detail}
+                    </p>
+                  </div>
+                </div>
+              </GlassCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="research" className="px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
-            eyebrow="Research & Experience"
+            eyebrow="Experience"
             title="Applied bioinformatics with translational intent."
           />
           <div className="grid gap-6 lg:grid-cols-2">
