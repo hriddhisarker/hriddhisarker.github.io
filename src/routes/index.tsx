@@ -126,7 +126,7 @@ const skillGroups = [
     skills: [
       { name: "Genomics / Proteomics / Transcriptomics", value: 86 },
       { name: "Network Biology", value: 82 },
-      { name: "Machine Learning in Biology", value: 76 },
+      { name: "Machine Learning in Biology", value: 30 },
     ],
   },
   {
