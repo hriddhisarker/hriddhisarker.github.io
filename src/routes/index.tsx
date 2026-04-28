@@ -80,25 +80,25 @@ const education = [
 
 const experiences = [
   {
-    role: "Research Assistant",
-    org: "University of Dhaka",
-    time: "June 2024–2025",
-    icon: Microscope,
-    points: [
-      "Bioinformatics and DEG analysis",
-      "Microarray datasets with GEO2R",
-      "R, Python, Cytoscape, STRING",
-    ],
-  },
-  {
     role: "Research Associate & Instructor",
     org: "Panacea Research Center",
     time: "2025–Present",
     icon: FlaskConical,
     points: [
-      "Computer-aided drug design projects",
+      "Computer-aided drug design (CADD) projects",
       "Teaching, mentoring, and research training",
-      "Docking, simulation, and publication workflows",
+      "Molecular docking, molecular dynamics simulation, and publication workflows",
+    ],
+  },
+  {
+    role: "Research Assistant",
+    org: "University of Dhaka",
+    time: "June 2024–2025",
+    icon: Microscope,
+    points: [
+      "Bioinformatics and Differentially Expressed Gene (DEG) analysis",
+      "Microarray dataset analysis using GEO2R",
+      "Tools and skills: R, Python, Cytoscape, STRING",
     ],
   },
 ];
