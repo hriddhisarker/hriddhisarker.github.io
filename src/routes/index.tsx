@@ -11,6 +11,7 @@ import {
   ExternalLink,
   FlaskConical,
   GraduationCap,
+  Linkedin,
   Mail,
   MapPin,
   Microscope,
@@ -50,6 +51,14 @@ const highlights = [
   "Research Associate & Instructor at Panacea Research Center",
   "Published researcher in RSC Advances and Elsevier",
 ];
+
+const profileLinks = {
+  linkedin:
+    "https://www.linkedin.com/in/hriddhi-sarker-b79503389?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  googleScholar:
+    "https://scholar.google.com/citations?hl=en&user=0Uexc3UAAAAJ&view_op=list_works&gmla=AIfU4H5fKX-qI05JOqU10OL_o7u2q2DQV3XA2Ecaw4hj2b-3_HLFuL6xxqhbO6tZKuSVaF3cTmuGCxXebdNtwFiE",
+  researchGate: "https://www.researchgate.net/profile/Hriddhi-Sarker?ev=hdr_xprf",
+};
 
 const education = [
   {
@@ -572,12 +581,12 @@ function Index() {
                     </a>
                   </Button>
                   <Button asChild variant="bioOutline" size="sm">
-                    <a href="https://scholar.google.com" target="_blank" rel="noreferrer">
+                    <a href={profileLinks.googleScholar} target="_blank" rel="noreferrer">
                       Google Scholar
                     </a>
                   </Button>
                   <Button asChild variant="bioOutline" size="sm">
-                    <a href="https://www.researchgate.net" target="_blank" rel="noreferrer">
+                    <a href={profileLinks.researchGate} target="_blank" rel="noreferrer">
                       ResearchGate
                     </a>
                   </Button>
@@ -684,17 +693,20 @@ function Index() {
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="bioOutline" size="sm">
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                <a href={profileLinks.linkedin} target="_blank" rel="noreferrer">
+                  <Linkedin className="h-4 w-4" />
                   LinkedIn
                 </a>
               </Button>
               <Button asChild variant="bioOutline" size="sm">
-                <a href="https://scholar.google.com" target="_blank" rel="noreferrer">
+                <a href={profileLinks.googleScholar} target="_blank" rel="noreferrer">
+                  <GraduationCap className="h-4 w-4" />
                   Google Scholar
                 </a>
               </Button>
               <Button asChild variant="bioOutline" size="sm">
-                <a href="https://www.researchgate.net" target="_blank" rel="noreferrer">
+                <a href={profileLinks.researchGate} target="_blank" rel="noreferrer">
+                  <Network className="h-4 w-4" />
                   ResearchGate
                 </a>
               </Button>
