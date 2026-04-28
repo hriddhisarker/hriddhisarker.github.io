@@ -142,22 +142,26 @@ const skillGroups = [
 
 const publications = [
   {
-    badge: "RSC Advances · IF 4.6",
+    badge: "RSC Advances · IF 4.6 · CiteScore 7.6",
     title:
-      "Computational and molecular investigation of bioactive compounds for therapeutic discovery",
-    authors: "Hriddhi Sarker et al.",
-    journal: "RSC Advances",
+      "Multi-Omics Pan-Cancer Profiling of CDK2 and In Silico Identification of Plant-Derived Inhibitors Using Machine Learning Approaches",
+    authors:
+      "Md Ahad Ali, Hriddhi Sarker, Tania Khan, Humaira Sheikh, Ahmed Saif, Farhad Bin Farid, Sadia Afrin, Most. Asha Khatun, Neeraj Kumar",
+    journal: "RSC Advances, 15, 36938–36968",
     summary:
-      "A research contribution combining molecular docking, biological interpretation, and computational validation for drug discovery.",
+      "Multi-omics pan-cancer profiling and in silico plant-derived inhibitor identification using machine learning approaches.",
+    doi: "https://doi.org/10.1039/d5ra05535k",
   },
   {
-    badge: "Elsevier · First Author Contribution",
+    badge: "Elsevier · IF 3.1 · CiteScore 4.3",
     title:
-      "Computational Biology and Chemistry study on molecular targets and candidate therapeutics",
-    authors: "Hriddhi Sarker et al.",
-    journal: "Computational Biology and Chemistry",
+      "Microbial biomolecule-driven identification of next-gen GSK-3β inhibitors for brain disorders",
+    authors:
+      "Lamia Islam, Hriddhi Sarker, Md Al Amin, Rahnuma Tabassum, Arpita Nandi, Tarikul Islam, Md Azad Patwary, Fairooz Ibnat, Firoz Ahmed*, Noimul Hasan Siddiquee*",
+    journal: "Computational Biology and Chemistry, 121, 108860 (2026)",
     summary:
-      "Integrated computational biology workflow connecting target selection, candidate screening, and mechanistic insight.",
+      "Publisher: Elsevier. Equal contribution as first author in a computational study identifying next-generation GSK-3β inhibitor candidates for brain disorders.",
+    doi: "https://doi.org/10.1016/j.compbiolchem.2025.108860",
   },
 ];
 
@@ -190,7 +194,8 @@ const projects = [
 
 const conferences = [
   {
-    event: "2nd International Conference on Recent Advances in Science and Technology (ICRAST 2025)",
+    event:
+      "2nd International Conference on Recent Advances in Science and Technology (ICRAST 2025)",
     role: "Poster Presentation, Presenter",
     title:
       "Identification of Prognostic Regulators and Novel Therapeutic Targets in Lung Cancer via Bioinformatics and Machine Learning",
@@ -559,7 +564,7 @@ function Index() {
                 <p className="mt-4 leading-7 text-muted-foreground">{paper.summary}</p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Button asChild variant="bioOutline" size="sm">
-                    <a href="https://doi.org" target="_blank" rel="noreferrer">
+                    <a href={paper.doi} target="_blank" rel="noreferrer">
                       DOI <ExternalLink className="h-3 w-3" />
                     </a>
                   </Button>
