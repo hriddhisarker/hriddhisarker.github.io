@@ -194,7 +194,8 @@ const projects = [
 
 const conferences = [
   {
-    event: "2nd International Conference on Recent Advances in Science and Technology (ICRAST 2025)",
+    event:
+      "2nd International Conference on Recent Advances in Science and Technology (ICRAST 2025)",
     role: "Poster Presentation, Presenter",
     title:
       "Identification of Prognostic Regulators and Novel Therapeutic Targets in Lung Cancer via Bioinformatics and Machine Learning",
