@@ -58,8 +58,18 @@ const education = [
     time: "2019–2024",
     detail: "CGPA 3.73",
   },
-  { label: "Higher Secondary Certificate", place: "Science background", time: "Pre-2019", detail: "Foundational life science training" },
-  { label: "Secondary School Certificate", place: "Bogura, Bangladesh", time: "Earlier", detail: "Academic foundation in science" },
+  {
+    label: "Higher Secondary Certificate",
+    place: "Science background",
+    time: "Pre-2019",
+    detail: "Foundational life science training",
+  },
+  {
+    label: "Secondary School Certificate",
+    place: "Bogura, Bangladesh",
+    time: "Earlier",
+    detail: "Academic foundation in science",
+  },
 ];
 
 const experiences = [
@@ -68,18 +78,31 @@ const experiences = [
     org: "University of Dhaka",
     time: "2024–Present",
     icon: Microscope,
-    points: ["Bioinformatics and DEG analysis", "Microarray datasets with GEO2R", "R, Python, Cytoscape, STRING"],
+    points: [
+      "Bioinformatics and DEG analysis",
+      "Microarray datasets with GEO2R",
+      "R, Python, Cytoscape, STRING",
+    ],
   },
   {
     role: "Research Associate & Instructor",
     org: "Panacea Research Center",
     time: "2025–Present",
     icon: FlaskConical,
-    points: ["Computer-aided drug design projects", "Teaching, mentoring, and research training", "Docking, simulation, and publication workflows"],
+    points: [
+      "Computer-aided drug design projects",
+      "Teaching, mentoring, and research training",
+      "Docking, simulation, and publication workflows",
+    ],
   },
 ];
 
-const internships = ["BioLab Bangladesh", "CHIRAL Bangladesh", "INMAS Rajshahi", "Panacea Research Center"];
+const internships = [
+  "BioLab Bangladesh",
+  "CHIRAL Bangladesh",
+  "INMAS Rajshahi",
+  "Panacea Research Center",
+];
 
 const skillGroups = [
   {
@@ -114,7 +137,8 @@ const skillGroups = [
 const publications = [
   {
     badge: "RSC Advances · IF 4.6",
-    title: "Computational and molecular investigation of bioactive compounds for therapeutic discovery",
+    title:
+      "Computational and molecular investigation of bioactive compounds for therapeutic discovery",
     authors: "Hriddhi Sarker et al.",
     journal: "RSC Advances",
     summary:
@@ -122,7 +146,8 @@ const publications = [
   },
   {
     badge: "Elsevier · First Author Contribution",
-    title: "Computational Biology and Chemistry study on molecular targets and candidate therapeutics",
+    title:
+      "Computational Biology and Chemistry study on molecular targets and candidate therapeutics",
     authors: "Hriddhi Sarker et al.",
     journal: "Computational Biology and Chemistry",
     summary:
@@ -131,15 +156,48 @@ const publications = [
 ];
 
 const projects = [
-  { title: "Computational Drug Design", tools: "PyMOL, Discovery Studio, AutoDock", icon: Dna, text: "Ligand screening, docking interpretation, and target-driven therapeutic exploration." },
-  { title: "Pan-Cancer Analysis", tools: "R, Python, TCGA workflows", icon: Network, text: "Expression signatures, survival insight, immune association, and biomarker prioritization." },
-  { title: "Molecular Docking & Simulation", tools: "GROMACS, PyMOL, Cytoscape", icon: TestTubeDiagonal, text: "Protein-ligand stability, interaction mapping, and structure-guided validation." },
-  { title: "Machine Learning in Drug Discovery", tools: "Python, scikit-learn, network features", icon: BrainCircuit, text: "Predictive pipelines that connect biological features with candidate prioritization." },
+  {
+    title: "Computational Drug Design",
+    tools: "PyMOL, Discovery Studio, AutoDock",
+    icon: Dna,
+    text: "Ligand screening, docking interpretation, and target-driven therapeutic exploration.",
+  },
+  {
+    title: "Pan-Cancer Analysis",
+    tools: "R, Python, TCGA workflows",
+    icon: Network,
+    text: "Expression signatures, survival insight, immune association, and biomarker prioritization.",
+  },
+  {
+    title: "Molecular Docking & Simulation",
+    tools: "GROMACS, PyMOL, Cytoscape",
+    icon: TestTubeDiagonal,
+    text: "Protein-ligand stability, interaction mapping, and structure-guided validation.",
+  },
+  {
+    title: "Machine Learning in Drug Discovery",
+    tools: "Python, scikit-learn, network features",
+    icon: BrainCircuit,
+    text: "Predictive pipelines that connect biological features with candidate prioritization.",
+  },
 ];
 
-const services = ["Bioinformatics Data Analysis", "Computer-Aided Drug Design", "Research Mentorship & Training", "Academic Writing Support"];
+const services = [
+  "Bioinformatics Data Analysis",
+  "Computer-Aided Drug Design",
+  "Research Mentorship & Training",
+  "Academic Writing Support",
+];
 
-function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
+function SectionHeading({
+  eyebrow,
+  title,
+  text,
+}: {
+  eyebrow: string;
+  title: string;
+  text?: string;
+}) {
   return (
     <div className="mx-auto mb-12 max-w-3xl text-center">
       <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-bio-cyan">{eyebrow}</p>
@@ -152,13 +210,39 @@ function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: stri
 function MolecularBackdrop() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      <svg className="absolute right-0 top-10 h-[34rem] w-[34rem] opacity-30 animate-bio-float" viewBox="0 0 520 520" fill="none">
-        <path d="M80 210C170 88 303 85 438 164M86 315c106 94 235 93 354 4" stroke="currentColor" className="text-bio-cyan" strokeWidth="2" strokeDasharray="10 12" />
+      <svg
+        className="absolute right-0 top-10 h-[34rem] w-[34rem] opacity-30 animate-bio-float"
+        viewBox="0 0 520 520"
+        fill="none"
+      >
+        <path
+          d="M80 210C170 88 303 85 438 164M86 315c106 94 235 93 354 4"
+          stroke="currentColor"
+          className="text-bio-cyan"
+          strokeWidth="2"
+          strokeDasharray="10 12"
+        />
         {Array.from({ length: 13 }).map((_, index) => (
-          <circle key={index} cx={80 + index * 30} cy={210 + Math.sin(index) * 92} r="5" className="fill-bio-teal" />
+          <circle
+            key={index}
+            cx={80 + index * 30}
+            cy={210 + Math.sin(index) * 92}
+            r="5"
+            className="fill-bio-teal"
+          />
         ))}
         {Array.from({ length: 13 }).map((_, index) => (
-          <line key={`line-${index}`} x1={80 + index * 30} y1={210 + Math.sin(index) * 92} x2={86 + index * 30} y2={315 + Math.cos(index) * 74} stroke="currentColor" className="text-primary" strokeWidth="1" opacity=".65" />
+          <line
+            key={`line-${index}`}
+            x1={80 + index * 30}
+            y1={210 + Math.sin(index) * 92}
+            x2={86 + index * 30}
+            y2={315 + Math.cos(index) * 74}
+            stroke="currentColor"
+            className="text-primary"
+            strokeWidth="1"
+            opacity=".65"
+          />
         ))}
       </svg>
       <div className="absolute left-[8%] top-[18%] h-2 w-2 rounded-full bg-bio-cyan animate-bio-pulse" />
@@ -168,8 +252,20 @@ function MolecularBackdrop() {
   );
 }
 
-function GlassCard({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <div className={`rounded-2xl border border-border bg-card-bio p-6 shadow-bio backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/45 ${className}`}>{children}</div>;
+function GlassCard({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`rounded-2xl border border-border bg-card-bio p-6 shadow-bio backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/45 ${className}`}
+    >
+      {children}
+    </div>
+  );
 }
 
 function Index() {
@@ -179,13 +275,25 @@ function Index() {
         <MolecularBackdrop />
         <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-8">
           <a href="#home" className="flex items-center gap-3 font-display text-lg font-bold">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-bio text-primary-foreground shadow-bio"><Dna className="h-5 w-5" /></span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-bio text-primary-foreground shadow-bio">
+              <Dna className="h-5 w-5" />
+            </span>
             Hriddhi Sarker
           </a>
           <div className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
-            {['About', 'Research', 'Skills', 'Publications', 'Contact'].map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="transition hover:text-primary">{item}</a>)}
+            {["About", "Research", "Skills", "Publications", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="transition hover:text-primary"
+              >
+                {item}
+              </a>
+            ))}
           </div>
-          <Button asChild variant="bioOutline" size="sm"><a href="mailto:hriddhisarkerborno@gmail.com">Collaborate</a></Button>
+          <Button asChild variant="bioOutline" size="sm">
+            <a href="mailto:hriddhisarkerborno@gmail.com">Collaborate</a>
+          </Button>
         </nav>
 
         <div className="relative z-10 mx-auto grid min-h-[calc(100vh-88px)] max-w-7xl items-center gap-12 px-5 pb-16 pt-6 md:grid-cols-[1.05fr_.95fr] md:px-8">
@@ -193,24 +301,59 @@ function Index() {
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-surface px-4 py-2 text-sm text-bio-cyan backdrop-blur">
               <Sparkles className="h-4 w-4" /> Bioinformatics Researcher | Computational Drug Design
             </div>
-            <h1 className="max-w-4xl text-5xl font-black leading-[1.02] md:text-7xl">Hriddhi Sarker</h1>
-            <p className="mt-5 max-w-2xl text-xl font-semibold text-primary">Bioinformatics Researcher | Computational Drug Design | Bridging Biology & AI</p>
+            <h1 className="max-w-4xl text-5xl font-black leading-[1.02] md:text-7xl">
+              Hriddhi Sarker
+            </h1>
+            <p className="mt-5 max-w-2xl text-xl font-semibold text-primary">
+              Bioinformatics Researcher | Computational Drug Design | Bridging Biology & AI
+            </p>
             <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-              A motivated and detail-oriented researcher with a strong background in biochemistry, molecular biology, and computer-aided drug discovery, aspiring to pursue advanced studies and contribute to global biomedical innovation.
+              A motivated and detail-oriented researcher with a strong background in biochemistry,
+              molecular biology, and computer-aided drug discovery, aspiring to pursue advanced
+              studies and contribute to global biomedical innovation.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild variant="bio" size="xl"><a href="#research"><BookOpen className="h-4 w-4" />View Research</a></Button>
-              <Button asChild variant="bioOutline" size="xl"><a href="/Hriddhi-Sarker-CV.pdf" download><Download className="h-4 w-4" />Download CV</a></Button>
-              <Button asChild variant="bioOutline" size="xl"><a href="#contact"><Mail className="h-4 w-4" />Contact Me</a></Button>
+              <Button asChild variant="bio" size="xl">
+                <a href="#research">
+                  <BookOpen className="h-4 w-4" />
+                  View Research
+                </a>
+              </Button>
+              <Button asChild variant="bioOutline" size="xl">
+                <a href="/Hriddhi-Sarker-CV.pdf" download>
+                  <Download className="h-4 w-4" />
+                  Download CV
+                </a>
+              </Button>
+              <Button asChild variant="bioOutline" size="xl">
+                <a href="#contact">
+                  <Mail className="h-4 w-4" />
+                  Contact Me
+                </a>
+              </Button>
             </div>
             <div className="mt-10 grid gap-3 md:grid-cols-3">
-              {highlights.map((highlight) => <div key={highlight} className="rounded-xl border border-border bg-surface p-4 text-sm text-muted-foreground backdrop-blur hover:border-primary/45"><Award className="mb-3 h-5 w-5 text-bio-green" />{highlight}</div>)}
+              {highlights.map((highlight) => (
+                <div
+                  key={highlight}
+                  className="rounded-xl border border-border bg-surface p-4 text-sm text-muted-foreground backdrop-blur hover:border-primary/45"
+                >
+                  <Award className="mb-3 h-5 w-5 text-bio-green" />
+                  {highlight}
+                </div>
+              ))}
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-[30rem]">
             <div className="absolute -inset-5 rounded-full bg-accent-bio opacity-20 blur-3xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-primary/30 bg-surface-elevated p-4 shadow-bio-strong">
-              <img src={hriddhiProfile} alt="Professional profile portrait of Hriddhi Sarker" width={1024} height={1024} className="aspect-square w-full rounded-[1.5rem] object-cover" />
+              <img
+                src={hriddhiProfile}
+                alt="Professional profile portrait of Hriddhi Sarker"
+                width={1024}
+                height={1024}
+                className="aspect-square w-full rounded-[1.5rem] object-cover"
+              />
               <div className="absolute bottom-8 left-8 rounded-2xl border border-border bg-background/70 p-4 backdrop-blur-xl">
                 <p className="text-3xl font-black text-primary">2+</p>
                 <p className="text-xs text-muted-foreground">Research roles</p>
@@ -218,19 +361,42 @@ function Index() {
             </div>
           </div>
         </div>
-        <a href="#about" aria-label="Scroll to about" className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 rounded-full border border-border bg-surface p-3 text-primary animate-bio-float"><ChevronDown className="h-5 w-5" /></a>
+        <a
+          href="#about"
+          aria-label="Scroll to about"
+          className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 rounded-full border border-border bg-surface p-3 text-primary animate-bio-float"
+        >
+          <ChevronDown className="h-5 w-5" />
+        </a>
       </section>
 
       <section id="about" className="px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading eyebrow="About Me" title="Multidisciplinary biology, computation, and discovery." text="Based in Bogura, Bangladesh, Hriddhi is pursuing MSc opportunities while advancing computational biology research with a detail-oriented, research-driven mindset." />
+          <SectionHeading
+            eyebrow="About Me"
+            title="Multidisciplinary biology, computation, and discovery."
+            text="Based in Bogura, Bangladesh, Hriddhi is pursuing MSc opportunities while advancing computational biology research with a detail-oriented, research-driven mindset."
+          />
           <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
             <GlassCard>
               <MapPin className="mb-5 h-8 w-8 text-bio-cyan" />
               <h3 className="mb-4 text-2xl font-bold">Research objective</h3>
-              <p className="leading-8 text-muted-foreground">To contribute to biomedical innovation by integrating biochemistry, molecular biology, bioinformatics, and AI-assisted drug discovery while developing as a global computational biology researcher.</p>
+              <p className="leading-8 text-muted-foreground">
+                To contribute to biomedical innovation by integrating biochemistry, molecular
+                biology, bioinformatics, and AI-assisted drug discovery while developing as a global
+                computational biology researcher.
+              </p>
               <div className="mt-6 flex flex-wrap gap-2">
-                {['Detail-oriented', 'Research-driven', 'Multidisciplinary thinker'].map((trait) => <span key={trait} className="rounded-full border border-primary/25 bg-surface px-3 py-1 text-xs text-primary">{trait}</span>)}
+                {["Detail-oriented", "Research-driven", "Multidisciplinary thinker"].map(
+                  (trait) => (
+                    <span
+                      key={trait}
+                      className="rounded-full border border-primary/25 bg-surface px-3 py-1 text-xs text-primary"
+                    >
+                      {trait}
+                    </span>
+                  ),
+                )}
               </div>
             </GlassCard>
             <div className="space-y-4">
@@ -238,11 +404,17 @@ function Index() {
                 <GlassCard key={item.label} className="relative overflow-hidden">
                   <div className="absolute left-0 top-0 h-full w-1 bg-accent-bio" />
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-primary"><GraduationCap className="h-5 w-5" /></div>
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
+                      <GraduationCap className="h-5 w-5" />
+                    </div>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">{item.time} · Step {index + 1}</p>
+                      <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">
+                        {item.time} · Step {index + 1}
+                      </p>
                       <h3 className="mt-1 text-xl font-bold">{item.label}</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">{item.place} — {item.detail}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {item.place} — {item.detail}
+                      </p>
                     </div>
                   </div>
                 </GlassCard>
@@ -254,26 +426,86 @@ function Index() {
 
       <section id="research" className="bg-surface px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading eyebrow="Research & Experience" title="Applied bioinformatics with translational intent." />
+          <SectionHeading
+            eyebrow="Research & Experience"
+            title="Applied bioinformatics with translational intent."
+          />
           <div className="grid gap-6 lg:grid-cols-2">
             {experiences.map((exp) => {
               const Icon = exp.icon;
-              return <GlassCard key={exp.role}><div className="mb-5 flex items-start justify-between gap-4"><div><p className="text-sm font-bold text-bio-cyan">{exp.time}</p><h3 className="mt-1 text-2xl font-bold">{exp.role}</h3><p className="text-muted-foreground">{exp.org}</p></div><Icon className="h-9 w-9 text-primary" /></div><ul className="space-y-3">{exp.points.map((point) => <li key={point} className="flex gap-3 text-sm text-muted-foreground"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-bio-green" />{point}</li>)}</ul></GlassCard>;
+              return (
+                <GlassCard key={exp.role}>
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-bold text-bio-cyan">{exp.time}</p>
+                      <h3 className="mt-1 text-2xl font-bold">{exp.role}</h3>
+                      <p className="text-muted-foreground">{exp.org}</p>
+                    </div>
+                    <Icon className="h-9 w-9 text-primary" />
+                  </div>
+                  <ul className="space-y-3">
+                    {exp.points.map((point) => (
+                      <li key={point} className="flex gap-3 text-sm text-muted-foreground">
+                        <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-bio-green" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </GlassCard>
+              );
             })}
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
-            {internships.map((name) => <details key={name} className="group rounded-2xl border border-border bg-card p-5 transition hover:border-primary/40"><summary className="flex cursor-pointer list-none items-center justify-between font-semibold"><span>{name}</span><ChevronDown className="h-4 w-4 text-primary transition group-open:rotate-180" /></summary><p className="mt-4 text-sm leading-6 text-muted-foreground">Hands-on exposure to research methods, biological analysis, and professional laboratory or computational workflows.</p></details>)}
+            {internships.map((name) => (
+              <details
+                key={name}
+                className="group rounded-2xl border border-border bg-card p-5 transition hover:border-primary/40"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between font-semibold">
+                  <span>{name}</span>
+                  <ChevronDown className="h-4 w-4 text-primary transition group-open:rotate-180" />
+                </summary>
+                <p className="mt-4 text-sm leading-6 text-muted-foreground">
+                  Hands-on exposure to research methods, biological analysis, and professional
+                  laboratory or computational workflows.
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="skills" className="px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading eyebrow="Skills & Expertise" title="A toolkit built for biology at scale." />
+          <SectionHeading
+            eyebrow="Skills & Expertise"
+            title="A toolkit built for biology at scale."
+          />
           <div className="grid gap-6 lg:grid-cols-3">
             {skillGroups.map((group) => {
               const Icon = group.icon;
-              return <GlassCard key={group.title}><Icon className="mb-5 h-8 w-8 text-bio-cyan" /><h3 className="mb-6 text-2xl font-bold">{group.title}</h3><div className="space-y-5">{group.skills.map((skill) => <div key={skill.name}><div className="mb-2 flex justify-between text-sm"><span>{skill.name}</span><span className="text-primary">{skill.value}%</span></div><div className="h-2 rounded-full bg-muted"><div className="h-full rounded-full bg-accent-bio" style={{ width: `${skill.value}%` }} /></div></div>)}</div></GlassCard>;
+              return (
+                <GlassCard key={group.title}>
+                  <Icon className="mb-5 h-8 w-8 text-bio-cyan" />
+                  <h3 className="mb-6 text-2xl font-bold">{group.title}</h3>
+                  <div className="space-y-5">
+                    {group.skills.map((skill) => (
+                      <div key={skill.name}>
+                        <div className="mb-2 flex justify-between text-sm">
+                          <span>{skill.name}</span>
+                          <span className="text-primary">{skill.value}%</span>
+                        </div>
+                        <div className="h-2 rounded-full bg-muted">
+                          <div
+                            className="h-full rounded-full bg-accent-bio"
+                            style={{ width: `${skill.value}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </GlassCard>
+              );
             })}
           </div>
         </div>
@@ -283,16 +515,61 @@ function Index() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Publications" title="Peer-reviewed research work." />
           <div className="grid gap-6 lg:grid-cols-2">
-            {publications.map((paper) => <GlassCard key={paper.title}><span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold text-bio-cyan">{paper.badge}</span><h3 className="mt-5 text-2xl font-bold">{paper.title}</h3><p className="mt-3 text-sm text-primary">{paper.authors} · {paper.journal}</p><p className="mt-4 leading-7 text-muted-foreground">{paper.summary}</p><div className="mt-6 flex flex-wrap gap-3"><Button asChild variant="bioOutline" size="sm"><a href="https://doi.org" target="_blank" rel="noreferrer">DOI <ExternalLink className="h-3 w-3" /></a></Button><Button asChild variant="bioOutline" size="sm"><a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar</a></Button><Button asChild variant="bioOutline" size="sm"><a href="https://www.researchgate.net" target="_blank" rel="noreferrer">ResearchGate</a></Button></div></GlassCard>)}
+            {publications.map((paper) => (
+              <GlassCard key={paper.title}>
+                <span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold text-bio-cyan">
+                  {paper.badge}
+                </span>
+                <h3 className="mt-5 text-2xl font-bold">{paper.title}</h3>
+                <p className="mt-3 text-sm text-primary">
+                  {paper.authors} · {paper.journal}
+                </p>
+                <p className="mt-4 leading-7 text-muted-foreground">{paper.summary}</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Button asChild variant="bioOutline" size="sm">
+                    <a href="https://doi.org" target="_blank" rel="noreferrer">
+                      DOI <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </Button>
+                  <Button asChild variant="bioOutline" size="sm">
+                    <a href="https://scholar.google.com" target="_blank" rel="noreferrer">
+                      Google Scholar
+                    </a>
+                  </Button>
+                  <Button asChild variant="bioOutline" size="sm">
+                    <a href="https://www.researchgate.net" target="_blank" rel="noreferrer">
+                      ResearchGate
+                    </a>
+                  </Button>
+                </div>
+              </GlassCard>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading eyebrow="Projects / Research Focus" title="Where computation meets therapeutic biology." />
+          <SectionHeading
+            eyebrow="Projects / Research Focus"
+            title="Where computation meets therapeutic biology."
+          />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {projects.map((project) => { const Icon = project.icon; return <GlassCard key={project.title}><div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary"><Icon className="h-7 w-7" /></div><h3 className="text-xl font-bold">{project.title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{project.text}</p><p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-bio-green">{project.tools}</p></GlassCard>; })}
+            {projects.map((project) => {
+              const Icon = project.icon;
+              return (
+                <GlassCard key={project.title}>
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-primary">
+                    <Icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-muted-foreground">{project.text}</p>
+                  <p className="mt-5 text-xs font-bold uppercase tracking-[0.18em] text-bio-green">
+                    {project.tools}
+                  </p>
+                </GlassCard>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -301,33 +578,123 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_.9fr]">
           <div>
             <SectionHeading eyebrow="Conferences" title="Presentations and academic engagement." />
-            <div className="grid gap-4 md:grid-cols-2"><GlassCard><Award className="mb-4 h-7 w-7 text-bio-amber" /><h3 className="text-xl font-bold">ICRAST 2025</h3><p className="mt-2 text-muted-foreground">Presenter</p></GlassCard><GlassCard><Award className="mb-4 h-7 w-7 text-bio-amber" /><h3 className="text-xl font-bold">ICASDS 2025</h3><p className="mt-2 text-muted-foreground">Co-author</p></GlassCard></div>
+            <div className="grid gap-4 md:grid-cols-2">
+              <GlassCard>
+                <Award className="mb-4 h-7 w-7 text-bio-amber" />
+                <h3 className="text-xl font-bold">ICRAST 2025</h3>
+                <p className="mt-2 text-muted-foreground">Presenter</p>
+              </GlassCard>
+              <GlassCard>
+                <Award className="mb-4 h-7 w-7 text-bio-amber" />
+                <h3 className="text-xl font-bold">ICASDS 2025</h3>
+                <p className="mt-2 text-muted-foreground">Co-author</p>
+              </GlassCard>
+            </div>
           </div>
-          <GlassCard className="self-center"><BriefcaseBusiness className="mb-5 h-8 w-8 text-bio-cyan" /><h2 className="text-3xl font-bold">Services</h2><div className="mt-6 grid gap-3">{services.map((service) => <div key={service} className="rounded-xl border border-border bg-background/35 p-4 text-sm text-muted-foreground">{service}</div>)}</div><Button asChild variant="bio" size="xl" className="mt-7"><a href="#contact">Request Collaboration</a></Button></GlassCard>
+          <GlassCard className="self-center">
+            <BriefcaseBusiness className="mb-5 h-8 w-8 text-bio-cyan" />
+            <h2 className="text-3xl font-bold">Services</h2>
+            <div className="mt-6 grid gap-3">
+              {services.map((service) => (
+                <div
+                  key={service}
+                  className="rounded-xl border border-border bg-background/35 p-4 text-sm text-muted-foreground"
+                >
+                  {service}
+                </div>
+              ))}
+            </div>
+            <Button asChild variant="bio" size="xl" className="mt-7">
+              <a href="#contact">Request Collaboration</a>
+            </Button>
+          </GlassCard>
         </div>
       </section>
 
       <section id="contact" className="px-5 py-24 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.9fr_1.1fr]">
           <div>
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-bio-cyan">Contact</p>
-            <h2 className="text-4xl font-bold md:text-5xl">Let’s discuss research, mentorship, or collaboration.</h2>
-            <div className="mt-8 space-y-4 text-muted-foreground"><p className="flex items-center gap-3"><Mail className="h-5 w-5 text-primary" />hriddhisarkerborno@gmail.com</p><p className="flex items-center gap-3"><Phone className="h-5 w-5 text-primary" />+8801533502861</p><p className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" />Bogura, Bangladesh</p></div>
-            <div className="mt-8 flex flex-wrap gap-3"><Button asChild variant="bioOutline" size="sm"><a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></Button><Button asChild variant="bioOutline" size="sm"><a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar</a></Button><Button asChild variant="bioOutline" size="sm"><a href="https://www.researchgate.net" target="_blank" rel="noreferrer">ResearchGate</a></Button></div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-bio-cyan">
+              Contact
+            </p>
+            <h2 className="text-4xl font-bold md:text-5xl">
+              Let’s discuss research, mentorship, or collaboration.
+            </h2>
+            <div className="mt-8 space-y-4 text-muted-foreground">
+              <p className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-primary" />
+                hriddhisarkerborno@gmail.com
+              </p>
+              <p className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-primary" />
+                +8801533502861
+              </p>
+              <p className="flex items-center gap-3">
+                <MapPin className="h-5 w-5 text-primary" />
+                Bogura, Bangladesh
+              </p>
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild variant="bioOutline" size="sm">
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                  LinkedIn
+                </a>
+              </Button>
+              <Button asChild variant="bioOutline" size="sm">
+                <a href="https://scholar.google.com" target="_blank" rel="noreferrer">
+                  Google Scholar
+                </a>
+              </Button>
+              <Button asChild variant="bioOutline" size="sm">
+                <a href="https://www.researchgate.net" target="_blank" rel="noreferrer">
+                  ResearchGate
+                </a>
+              </Button>
+            </div>
           </div>
           <GlassCard>
             <form className="space-y-4">
-              <input aria-label="Name" placeholder="Name" className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30" />
-              <input aria-label="Email" type="email" placeholder="Email" className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30" />
-              <textarea aria-label="Message" placeholder="Message" rows={6} className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30" />
-              <Button type="button" variant="bio" size="xl" className="w-full"><Send className="h-4 w-4" />Send Message</Button>
+              <input
+                aria-label="Name"
+                placeholder="Name"
+                className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+              />
+              <input
+                aria-label="Email"
+                type="email"
+                placeholder="Email"
+                className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+              />
+              <textarea
+                aria-label="Message"
+                placeholder="Message"
+                rows={6}
+                className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+              />
+              <Button type="button" variant="bio" size="xl" className="w-full">
+                <Send className="h-4 w-4" />
+                Send Message
+              </Button>
             </form>
           </GlassCard>
         </div>
       </section>
 
       <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground md:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row"><p>© 2026 Hriddhi Sarker. Computational biology portfolio.</p><div className="flex gap-5"><a href="#home" className="hover:text-primary">Home</a><a href="#research" className="hover:text-primary">Research</a><a href="#contact" className="hover:text-primary">Contact</a></div></div>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row">
+          <p>© 2026 Hriddhi Sarker. Computational biology portfolio.</p>
+          <div className="flex gap-5">
+            <a href="#home" className="hover:text-primary">
+              Home
+            </a>
+            <a href="#research" className="hover:text-primary">
+              Research
+            </a>
+            <a href="#contact" className="hover:text-primary">
+              Contact
+            </a>
+          </div>
+        </div>
       </footer>
     </main>
   );
