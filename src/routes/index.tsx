@@ -336,12 +336,14 @@ function Index() {
               Hriddhi Sarker
             </h1>
             <p className="mt-5 max-w-2xl text-xl font-semibold text-primary">
-              Bioinformatics Researcher | Computational Drug Design | Bridging Biology & AI
+              Integrating Biology, Computation, and Discovery
             </p>
             <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-              A motivated and detail-oriented researcher with a strong background in biochemistry,
-              molecular biology, and computer-aided drug discovery, aspiring to pursue advanced
-              studies and contribute to global biomedical innovation.
+              I am based in Bogura, Bangladesh, and I am a research-focused bioinformatics
+              enthusiast with a strong foundation in biochemistry and molecular biology. I approach
+              my work with a detail-oriented and analytical mindset, actively advancing my expertise
+              in computational biology while preparing for postgraduate studies to further specialize
+              in this field.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild variant="bio" size="xl">
@@ -406,16 +408,17 @@ function Index() {
           <SectionHeading
             eyebrow="About Me"
             title="Multidisciplinary biology, computation, and discovery."
-            text="Based in Bogura, Bangladesh, Hriddhi is pursuing MSc opportunities while advancing computational biology research with a detail-oriented, research-driven mindset."
+            text="I am based in Bogura, Bangladesh, and I am a research-focused bioinformatics enthusiast with a strong foundation in biochemistry and molecular biology."
           />
           <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
             <GlassCard>
               <MapPin className="mb-5 h-8 w-8 text-bio-cyan" />
               <h3 className="mb-4 text-2xl font-bold">Research objective</h3>
               <p className="leading-8 text-muted-foreground">
-                To contribute to biomedical innovation by integrating biochemistry, molecular
-                biology, bioinformatics, and AI-assisted drug discovery while developing as a global
-                computational biology researcher.
+                My goal is to contribute to biomedical innovation by integrating biochemistry,
+                molecular biology, bioinformatics, and AI-driven drug discovery. I aim to grow as a
+                globally competent computational biology researcher and contribute to impactful,
+                interdisciplinary research that addresses real-world health challenges.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Detail-oriented", "Research-driven", "Multidisciplinary thinker"].map(
