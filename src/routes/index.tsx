@@ -188,6 +188,26 @@ const projects = [
   },
 ];
 
+const conferences = [
+  {
+    event: "2nd International Conference on Recent Advances in Science and Technology (ICRAST 2025)",
+    role: "Poster Presentation, Presenter",
+    title:
+      "Identification of Prognostic Regulators and Novel Therapeutic Targets in Lung Cancer via Bioinformatics and Machine Learning",
+    authors:
+      "Hriddhi Sarker, Md Ahad Ali, Humaira Sheikh, Tarikul Islam, Sujoy Banik, Md. Nurul Haque Mollah",
+    doi: "https://doi.org/10.13140/RG.2.2.19541.69605",
+  },
+  {
+    event: "International Conference on Applied Statistics and Data Science (ICASDS 2025)",
+    role: "Poster Presentation, Co-author",
+    title:
+      "Investigating the bioactivity of natural compounds targeting hMPV infection causing viral (F) proteins: A network pharmacology approach",
+    authors:
+      "Humaira Sheikh, Md. Ahad Ali, Nur Mohammad, Hriddhi Sarker, Neeraj Kumar, Md. Nurul Haque Mollah",
+  },
+];
+
 const services = [
   "Bioinformatics Data Analysis",
   "Computer-Aided Drug Design",
@@ -590,17 +610,25 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_.9fr]">
           <div>
             <SectionHeading eyebrow="Conferences" title="Presentations and academic engagement." />
-            <div className="grid gap-4 md:grid-cols-2">
-              <GlassCard>
-                <Award className="mb-4 h-7 w-7 text-bio-amber" />
-                <h3 className="text-xl font-bold">ICRAST 2025</h3>
-                <p className="mt-2 text-muted-foreground">Presenter</p>
-              </GlassCard>
-              <GlassCard>
-                <Award className="mb-4 h-7 w-7 text-bio-amber" />
-                <h3 className="text-xl font-bold">ICASDS 2025</h3>
-                <p className="mt-2 text-muted-foreground">Co-author</p>
-              </GlassCard>
+            <div className="grid gap-4">
+              {conferences.map((conference) => (
+                <GlassCard key={conference.title}>
+                  <Award className="mb-4 h-7 w-7 text-bio-amber" />
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">
+                    {conference.role}
+                  </p>
+                  <h3 className="mt-3 text-xl font-bold leading-snug">{conference.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-primary">{conference.authors}</p>
+                  <p className="mt-4 text-sm leading-6 text-muted-foreground">{conference.event}</p>
+                  {conference.doi && (
+                    <Button asChild variant="bioOutline" size="sm" className="mt-5">
+                      <a href={conference.doi} target="_blank" rel="noreferrer">
+                        DOI <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </Button>
+                  )}
+                </GlassCard>
+              ))}
             </div>
           </div>
           <GlassCard className="self-center">
