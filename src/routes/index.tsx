@@ -53,28 +53,28 @@ const highlights = [
 
 const education = [
   {
-    label: "Master of Science in Biotechnology",
-    place: "BRAC University",
+    label: "Master of Science (M.Sc.) in Biotechnology",
+    place: "BRAC University, Bangladesh",
     time: "June 2026–Present",
-    detail: "Advanced biotechnology studies",
+    detail: "Biotechnology graduate program",
   },
   {
-    label: "B.Sc in Biochemistry & Molecular Biology",
-    place: "University of Rajshahi",
+    label: "Bachelor of Science (B.Sc.) in Biochemistry and Molecular Biology",
+    place: "University of Rajshahi, Bangladesh",
     time: "2019–2024",
-    detail: "CGPA 3.73",
+    detail: "CGPA: 3.73/4.00",
   },
   {
-    label: "Higher Secondary Certificate",
-    place: "Science background",
+    label: "Higher Secondary Certificate (HSC) in Science",
+    place: "Govt. Azizul Haque College, Bogura",
     time: "2016–2018",
-    detail: "Foundational life science training",
+    detail: "GPA: 4.83/5.00",
   },
   {
-    label: "Secondary School Certificate",
-    place: "Bogura, Bangladesh",
+    label: "Secondary School Certificate (SSC) in Science",
+    place: "A.P.B.N Public School and College, Bogura",
     time: "2016",
-    detail: "Academic foundation in science",
+    detail: "GPA: 5.00/5.00",
   },
 ];
 
