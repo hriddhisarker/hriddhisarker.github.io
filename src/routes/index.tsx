@@ -53,6 +53,12 @@ const highlights = [
 
 const education = [
   {
+    label: "Master of Science in Biotechnology",
+    place: "BRAC University",
+    time: "June 2026–Present",
+    detail: "Advanced biotechnology studies",
+  },
+  {
     label: "B.Sc in Biochemistry & Molecular Biology",
     place: "University of Rajshahi",
     time: "2019–2024",
@@ -61,13 +67,13 @@ const education = [
   {
     label: "Higher Secondary Certificate",
     place: "Science background",
-    time: "Pre-2019",
+    time: "2016–2018",
     detail: "Foundational life science training",
   },
   {
     label: "Secondary School Certificate",
     place: "Bogura, Bangladesh",
-    time: "Earlier",
+    time: "2016",
     detail: "Academic foundation in science",
   },
 ];
@@ -76,7 +82,7 @@ const experiences = [
   {
     role: "Research Assistant",
     org: "University of Dhaka",
-    time: "2024–Present",
+    time: "June 2024–2025",
     icon: Microscope,
     points: [
       "Bioinformatics and DEG analysis",
