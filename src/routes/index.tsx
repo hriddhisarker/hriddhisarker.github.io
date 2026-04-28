@@ -468,7 +468,7 @@ function Index() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Experience"
-            title="Applied bioinformatics with translational intent."
+            title="Applied Bioinformatics with Translational Focus"
           />
           <div className="grid gap-6 lg:grid-cols-2">
             {experiences.map((exp) => {
