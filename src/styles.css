@@ -193,6 +193,10 @@
     box-shadow: var(--shadow-bio);
   }
 
+  .shadow-bio-strong {
+    box-shadow: var(--shadow-bio-strong);
+  }
+
   .animate-bio-float {
     animation: bio-float 8s ease-in-out infinite;
   }
