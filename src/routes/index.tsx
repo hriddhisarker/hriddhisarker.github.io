@@ -22,7 +22,7 @@ import {
   Users,
 } from "lucide-react";
 
-import hriddhiProfile from "@/assets/hriddhi-profile-photo.jpg";
+import hriddhiProfile from "@/assets/hriddhi-profile-apron.png";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
