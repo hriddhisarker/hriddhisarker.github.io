@@ -516,7 +516,7 @@ function Index() {
                 </a>
               </Button>
               <Button asChild variant="bioOutline" size="xl">
-                <a href="/Hriddhi-Sarker-CV.pdf" download>
+                <a href="/Hriddhi_Sarker_CV.pdf" download>
                   <Download className="h-4 w-4" />
                   Download CV
                 </a>
