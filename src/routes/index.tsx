@@ -120,10 +120,44 @@ const experiences = [
 ];
 
 const internships = [
-  "BioLab Bangladesh",
-  "CHIRAL Bangladesh",
-  "INMAS Rajshahi",
-  "Panacea Research Center",
+  {
+    name: "Research Intern at Panacea Research Center",
+    time: "July 2024 – May 2025",
+    points: [
+      "Worked with a multidisciplinary team on computer-aided drug design projects.",
+      "Coordinated with team members to ensure alignment and progress towards research goals.",
+      "Maintained detailed records of experiments, protocols, and results.",
+      "Gained proficiency in advanced bioinformatics tools and software.",
+    ],
+  },
+  {
+    name: "Research Intern at BioLab Bangladesh",
+    time: "June 2024 – April 2025",
+    points: [
+      "Analyzed molecular interactions and predicted binding affinities using computational tools.",
+      "Conducted data mining and analysis to identify potential drug targets and lead compounds.",
+      "Collaborated with chemoinformatics experts to optimize compound libraries and screening methods.",
+      "Presented findings in virtual meetings and contributed to scientific publications and reports.",
+    ],
+  },
+  {
+    name: "Research Intern at CHIRAL Bangladesh",
+    time: "July 01, 2024 – September 30, 2024",
+    points: [
+      "Gained foundational knowledge in health research methodology.",
+      "Collected and managed research data using mobile data collection tools like Kobo Toolbox.",
+      "Performed research data analysis with R programming, enhancing statistical and computational skills.",
+      "Developed expertise in scientific writing and contributed to preparing a scientific paper.",
+      "Participated in workshops and hands-on sessions on publishing research findings.",
+    ],
+  },
+  {
+    name: "Research Intern at INMAS, Rajshahi",
+    time: "December 26, 2023 – January 1, 2024",
+    points: [
+      "Gained hands-on experience in advanced diagnostic techniques such as radioimmunoassay, bone scanning, and thyroid scanning.",
+    ],
+  },
 ];
 
 const skillGroups = [
