@@ -669,19 +669,26 @@ function Index() {
             })}
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
-            {internships.map((name) => (
+            {internships.map((internship) => (
               <details
-                key={name}
+                key={internship.name}
                 className="group rounded-2xl border border-border bg-card p-5 transition hover:border-primary/40"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between font-semibold">
-                  <span>{name}</span>
+                  <span>{internship.name}</span>
                   <ChevronDown className="h-4 w-4 text-primary transition group-open:rotate-180" />
                 </summary>
-                <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                  Hands-on exposure to research methods, biological analysis, and professional
-                  laboratory or computational workflows.
+                <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-bio-green">
+                  {internship.time}
                 </p>
+                <ul className="mt-4 space-y-3">
+                  {internship.points.map((point) => (
+                    <li key={point} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                      <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-bio-green" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </details>
             ))}
           </div>
