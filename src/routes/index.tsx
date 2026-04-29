@@ -55,7 +55,7 @@ const highlights = [
 ];
 
 const profileLinks = {
-  linkedin: "https://www.linkedin.com/in/hriddhi-sarker-b79503389",
+  linkedin: "https://www.linkedin.com/in/hriddhi-sarker-b79503389/",
   googleScholar:
     "https://scholar.google.com/citations?hl=en&user=0Uexc3UAAAAJ&view_op=list_works&gmla=AIfU4H5fKX-qI05JOqU10OL_o7u2q2DQV3XA2Ecaw4hj2b-3_HLFuL6xxqhbO6tZKuSVaF3cTmuGCxXebdNtwFiE",
   researchGate: "https://www.researchgate.net/profile/Hriddhi-Sarker?ev=hdr_xprf",
