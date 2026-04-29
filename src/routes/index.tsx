@@ -568,11 +568,6 @@ function Index() {
 
       <section id="about" className="px-5 py-24 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="About Me"
-            title="Multidisciplinary biology, computation, and discovery."
-            text="I am a motivated and detail-oriented Life Science graduate with a strong foundation in biochemistry, molecular biology, and bioinformatics."
-          />
           <div>
             <GlassCard className="w-full">
               <div className="mb-6 flex items-center justify-center gap-4">
