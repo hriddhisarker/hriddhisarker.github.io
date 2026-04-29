@@ -573,11 +573,14 @@ function Index() {
             title="Multidisciplinary biology, computation, and discovery."
             text="I am a motivated and detail-oriented Life Science graduate with a strong foundation in biochemistry, molecular biology, and bioinformatics."
           />
-          <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
-            <GlassCard>
-              <Dna className="mb-5 h-8 w-8 text-bio-cyan" />
-              <h3 className="mb-4 text-2xl font-bold">About Me</h3>
-              <div className="space-y-5 text-justify leading-8 text-muted-foreground">
+          <div>
+            <GlassCard className="w-full">
+              <div className="grid gap-6 lg:grid-cols-[14rem_1fr] lg:items-start">
+                <div>
+                  <Dna className="mb-5 h-8 w-8 text-bio-cyan" />
+                  <h3 className="text-2xl font-bold">About Me</h3>
+                </div>
+                <div className="space-y-5 text-justify leading-8 text-muted-foreground">
                 <p>
                   My academic journey has been driven by a deep interest in understanding complex
                   biological systems through both experimental and computational approaches.
@@ -600,6 +603,7 @@ function Index() {
                   expertise in molecular and computational biology and contribute to innovative
                   research addressing global health challenges.
                 </p>
+                </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Detail-oriented", "Research-driven", "Multidisciplinary thinker"].map(
