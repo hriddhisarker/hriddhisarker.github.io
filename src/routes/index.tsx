@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
   Award,
@@ -58,6 +59,12 @@ const profileLinks = {
   googleScholar:
     "https://scholar.google.com/citations?hl=en&user=0Uexc3UAAAAJ&view_op=list_works&gmla=AIfU4H5fKX-qI05JOqU10OL_o7u2q2DQV3XA2Ecaw4hj2b-3_HLFuL6xxqhbO6tZKuSVaF3cTmuGCxXebdNtwFiE",
   researchGate: "https://www.researchgate.net/profile/Hriddhi-Sarker?ev=hdr_xprf",
+};
+
+const emailJsConfig = {
+  publicKey: "WaTwgha82oiDscpk7",
+  serviceId: "service_euk2eij",
+  templateId: "template_4q4ompm",
 };
 
 const education = [
