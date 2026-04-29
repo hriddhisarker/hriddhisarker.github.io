@@ -45,12 +45,6 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Hriddhi Sarker — Bioinformatics Researcher" },
-      { name: "description", content: "A modern portfolio website showcasing a bioinformatics researcher's expertise in computational drug design and molecular biology." },
-      { property: "og:description", content: "A modern portfolio website showcasing a bioinformatics researcher's expertise in computational drug design and molecular biology." },
-      { name: "twitter:description", content: "A modern portfolio website showcasing a bioinformatics researcher's expertise in computational drug design and molecular biology." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/19eed95b-1ab8-43e9-a15b-edf2e1810ccb/id-preview-76482569--3357c486-5e12-458c-8532-62298d15f908.lovable.app-1777382466084.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/19eed95b-1ab8-43e9-a15b-edf2e1810ccb/id-preview-76482569--3357c486-5e12-458c-8532-62298d15f908.lovable.app-1777382466084.png" },
     ],
     links: [
       {

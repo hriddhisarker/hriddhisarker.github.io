@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -230,12 +229,6 @@ const services = [
   "Academic Writing Support",
 ];
 
-const emailJsConfig = {
-  serviceId: "service_euk2eij",
-  templateId: "template_4q4ompm",
-  publicKey: "WaTwgha82oiDscpk7",
-};
-
 function SectionHeading({
   eyebrow,
   title,
@@ -316,55 +309,6 @@ function GlassCard({
 }
 
 function Index() {
-  const [contactStatus, setContactStatus] = useState<"idle" | "sending" | "success" | "error">(
-    "idle",
-  );
-
-  async function handleContactSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setContactStatus("sending");
-
-    const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    if (!name || !email || !message) {
-      setContactStatus("error");
-      return;
-    }
-
-    try {
-      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          service_id: emailJsConfig.serviceId,
-          template_id: emailJsConfig.templateId,
-          user_id: emailJsConfig.publicKey,
-          template_params: {
-            name,
-            from_name: name,
-            email,
-            from_email: email,
-            reply_to: email,
-            message,
-            to_name: "Hriddhi Sarker",
-          },
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("EmailJS request failed");
-      }
-
-      event.currentTarget.reset();
-      setContactStatus("success");
-    } catch {
-      setContactStatus("error");
-    }
-  }
-
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <section id="home" className="relative bg-hero-bio">
@@ -769,50 +713,28 @@ function Index() {
             </div>
           </div>
           <GlassCard>
-            <form className="space-y-4" onSubmit={handleContactSubmit}>
+            <form className="space-y-4">
               <input
                 aria-label="Name"
-                name="name"
                 placeholder="Name"
-                required
                 className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
               />
               <input
                 aria-label="Email"
-                name="email"
                 type="email"
                 placeholder="Email"
-                required
                 className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
               />
               <textarea
                 aria-label="Message"
-                name="message"
                 placeholder="Message"
                 rows={6}
-                required
                 className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
               />
-              <Button
-                type="submit"
-                variant="bio"
-                size="xl"
-                className="w-full"
-                disabled={contactStatus === "sending"}
-              >
+              <Button type="button" variant="bio" size="xl" className="w-full">
                 <Send className="h-4 w-4" />
-                {contactStatus === "sending" ? "Sending..." : "Send Message"}
+                Send Message
               </Button>
-              {contactStatus === "success" && (
-                <p className="text-sm font-medium text-bio-green">
-                  Message sent successfully. Thank you for reaching out.
-                </p>
-              )}
-              {contactStatus === "error" && (
-                <p className="text-sm font-medium text-destructive">
-                  Please fill all fields correctly or try again later.
-                </p>
-              )}
             </form>
           </GlassCard>
         </div>
