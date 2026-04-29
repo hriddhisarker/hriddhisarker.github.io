@@ -839,6 +839,55 @@ function Index() {
         </div>
       </section>
 
+      <section className="px-5 py-24 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Activities & Training" title="Workshops, service, and interests." />
+          <div className="grid gap-6 lg:grid-cols-3">
+            <GlassCard>
+              <Users className="mb-5 h-8 w-8 text-bio-cyan" />
+              <h3 className="text-2xl font-bold">Extra-Curricular Activities</h3>
+              <ul className="mt-6 space-y-3">
+                {extraCurricularActivities.map((activity) => (
+                  <li key={activity} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-bio-green" />
+                    {activity}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+            <GlassCard>
+              <Sparkles className="mb-5 h-8 w-8 text-bio-cyan" />
+              <h3 className="text-2xl font-bold">Hobbies and Interests</h3>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {hobbies.map((hobby) => (
+                  <span
+                    key={hobby}
+                    className="rounded-full border border-primary/25 bg-surface px-3 py-1 text-xs text-primary"
+                  >
+                    {hobby}
+                  </span>
+                ))}
+              </div>
+            </GlassCard>
+            <GlassCard>
+              <BookOpen className="mb-5 h-8 w-8 text-bio-cyan" />
+              <h3 className="text-2xl font-bold">Trainings and Workshops</h3>
+              <div className="mt-6 space-y-4">
+                {trainings.map((training) => (
+                  <div key={training.title} className="border-b border-border pb-4 last:border-b-0">
+                    <h4 className="font-bold leading-snug">{training.title}</h4>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">{training.provider}</p>
+                    <p className="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-bio-green">
+                      {training.duration}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="px-5 py-24 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.9fr_1.1fr]">
           <div>
