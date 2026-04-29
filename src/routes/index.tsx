@@ -120,10 +120,44 @@ const experiences = [
 ];
 
 const internships = [
-  "BioLab Bangladesh",
-  "CHIRAL Bangladesh",
-  "INMAS Rajshahi",
-  "Panacea Research Center",
+  {
+    name: "Research Intern at Panacea Research Center",
+    time: "July 2024 – May 2025",
+    points: [
+      "Worked with a multidisciplinary team on computer-aided drug design projects.",
+      "Coordinated with team members to ensure alignment and progress towards research goals.",
+      "Maintained detailed records of experiments, protocols, and results.",
+      "Gained proficiency in advanced bioinformatics tools and software.",
+    ],
+  },
+  {
+    name: "Research Intern at BioLab Bangladesh",
+    time: "June 2024 – April 2025",
+    points: [
+      "Analyzed molecular interactions and predicted binding affinities using computational tools.",
+      "Conducted data mining and analysis to identify potential drug targets and lead compounds.",
+      "Collaborated with chemoinformatics experts to optimize compound libraries and screening methods.",
+      "Presented findings in virtual meetings and contributed to scientific publications and reports.",
+    ],
+  },
+  {
+    name: "Research Intern at CHIRAL Bangladesh",
+    time: "July 01, 2024 – September 30, 2024",
+    points: [
+      "Gained foundational knowledge in health research methodology.",
+      "Collected and managed research data using mobile data collection tools like Kobo Toolbox.",
+      "Performed research data analysis with R programming, enhancing statistical and computational skills.",
+      "Developed expertise in scientific writing and contributed to preparing a scientific paper.",
+      "Participated in workshops and hands-on sessions on publishing research findings.",
+    ],
+  },
+  {
+    name: "Research Intern at INMAS, Rajshahi",
+    time: "December 26, 2023 – January 1, 2024",
+    points: [
+      "Gained hands-on experience in advanced diagnostic techniques such as radioimmunoassay, bone scanning, and thyroid scanning.",
+    ],
+  },
 ];
 
 const skillGroups = [
@@ -234,6 +268,35 @@ const services = [
   "Computer-Aided Drug Design",
   "Research Mentorship & Training",
   "Academic Writing Support",
+];
+
+const extraCurricularActivities = [
+  "Campus Ambassador at Plasma Cell Research Center",
+  "Member at Theatre Idea",
+  "Member at Shangshaptak Theatre",
+  "Volunteer and Member of Nobojagoron Foundation, University of Rajshahi",
+  "Provided private tuition in science subjects to high school students",
+];
+
+const hobbies = ["Scientific Reading and Writing", "Team Sports", "Programming", "Singing", "Chess"];
+
+const trainings = [
+  {
+    title: "Basics of Pharmaceuticals",
+    provider: "Rajshahi University Biochemistry and Molecular Biology Alumni Association",
+    duration: "1 day · 31 May 2024",
+  },
+  {
+    title: "Bioinformatics for Computer-Aided Drug Design",
+    provider: "Panacea Research Center",
+    duration: "1 month · 3 May 2024 – 7 June 2024",
+  },
+  {
+    title:
+      "Bone Scanning, Radioimmunoassay, Chemiluminescent Immunoassay, Thyroid Scanning, and Renogram Techniques",
+    provider: "Institute of Nuclear Medicine and Allied",
+    duration: "7 days · 26 December 2023 – 1 January 2024",
+  },
 ];
 
 function SectionHeading({
@@ -606,19 +669,26 @@ function Index() {
             })}
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-4">
-            {internships.map((name) => (
+            {internships.map((internship) => (
               <details
-                key={name}
+                key={internship.name}
                 className="group rounded-2xl border border-border bg-card p-5 transition hover:border-primary/40"
               >
                 <summary className="flex cursor-pointer list-none items-center justify-between font-semibold">
-                  <span>{name}</span>
+                  <span>{internship.name}</span>
                   <ChevronDown className="h-4 w-4 text-primary transition group-open:rotate-180" />
                 </summary>
-                <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                  Hands-on exposure to research methods, biological analysis, and professional
-                  laboratory or computational workflows.
+                <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-bio-green">
+                  {internship.time}
                 </p>
+                <ul className="mt-4 space-y-3">
+                  {internship.points.map((point) => (
+                    <li key={point} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                      <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-bio-green" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </details>
             ))}
           </div>
@@ -766,6 +836,55 @@ function Index() {
               <a href="#contact">Request Collaboration</a>
             </Button>
           </GlassCard>
+        </div>
+      </section>
+
+      <section className="px-5 py-24 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Activities & Training" title="Workshops, service, and interests." />
+          <div className="grid gap-6 lg:grid-cols-3">
+            <GlassCard>
+              <Users className="mb-5 h-8 w-8 text-bio-cyan" />
+              <h3 className="text-2xl font-bold">Extra-Curricular Activities</h3>
+              <ul className="mt-6 space-y-3">
+                {extraCurricularActivities.map((activity) => (
+                  <li key={activity} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-bio-green" />
+                    {activity}
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
+            <GlassCard>
+              <Sparkles className="mb-5 h-8 w-8 text-bio-cyan" />
+              <h3 className="text-2xl font-bold">Hobbies and Interests</h3>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {hobbies.map((hobby) => (
+                  <span
+                    key={hobby}
+                    className="rounded-full border border-primary/25 bg-surface px-3 py-1 text-xs text-primary"
+                  >
+                    {hobby}
+                  </span>
+                ))}
+              </div>
+            </GlassCard>
+            <GlassCard>
+              <BookOpen className="mb-5 h-8 w-8 text-bio-cyan" />
+              <h3 className="text-2xl font-bold">Trainings and Workshops</h3>
+              <div className="mt-6 space-y-4">
+                {trainings.map((training) => (
+                  <div key={training.title} className="border-b border-border pb-4 last:border-b-0">
+                    <h4 className="font-bold leading-snug">{training.title}</h4>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">{training.provider}</p>
+                    <p className="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-bio-green">
+                      {training.duration}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
         </div>
       </section>
 
