@@ -508,16 +508,6 @@ function Index() {
             <h1 className="max-w-4xl text-5xl font-black leading-[1.02] md:text-7xl">
               Hriddhi Sarker
             </h1>
-            <p className="mt-5 max-w-2xl text-xl font-semibold text-primary">
-              Integrating Biology, Computation, and Discovery
-            </p>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
-              I am based in Bogura, Bangladesh, and I am a research-focused bioinformatics
-              enthusiast with a strong foundation in biochemistry and molecular biology. I approach
-              my work with a detail-oriented and analytical mindset, actively advancing my expertise
-              in computational biology while preparing for postgraduate studies to further specialize
-              in this field.
-            </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild variant="bio" size="xl">
                 <a href="#research">
