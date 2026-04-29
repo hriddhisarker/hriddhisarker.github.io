@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import emailjs from "@emailjs/browser";
-import { useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
   Award,
@@ -320,22 +320,38 @@ function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
+  useEffect(() => {
+    emailjs.init({ publicKey: emailJsConfig.publicKey });
+  }, []);
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!formRef.current) return;
+    const form = formRef.current;
+
+    if (!form) return;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setStatus("idle");
+      return;
+    }
 
     setStatus("sending");
 
     try {
-      emailjs.init({ publicKey: emailJsConfig.publicKey });
-      await emailjs.sendForm(
+      const response = await emailjs.sendForm(
         emailJsConfig.serviceId,
         emailJsConfig.templateId,
-        formRef.current,
-        emailJsConfig.publicKey,
+        form,
+        { publicKey: emailJsConfig.publicKey },
       );
-      formRef.current.reset();
+
+      if (response.status !== 200) {
+        throw new Error(response.text || "EmailJS request failed");
+      }
+
+      form.reset();
       setStatus("success");
     } catch {
       setStatus("error");
