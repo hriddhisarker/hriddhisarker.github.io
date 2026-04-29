@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import emailjs from "@emailjs/browser";
+import { useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
   Award,
@@ -58,6 +60,12 @@ const profileLinks = {
   googleScholar:
     "https://scholar.google.com/citations?hl=en&user=0Uexc3UAAAAJ&view_op=list_works&gmla=AIfU4H5fKX-qI05JOqU10OL_o7u2q2DQV3XA2Ecaw4hj2b-3_HLFuL6xxqhbO6tZKuSVaF3cTmuGCxXebdNtwFiE",
   researchGate: "https://www.researchgate.net/profile/Hriddhi-Sarker?ev=hdr_xprf",
+};
+
+const emailJsConfig = {
+  publicKey: "WaTwgha82oiDscpk7",
+  serviceId: "service_euk2eij",
+  templateId: "template_4q4ompm",
 };
 
 const education = [
@@ -305,6 +313,84 @@ function GlassCard({
     >
       {children}
     </div>
+  );
+}
+
+function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!formRef.current) return;
+
+    setStatus("sending");
+
+    try {
+      emailjs.init({ publicKey: emailJsConfig.publicKey });
+      await emailjs.sendForm(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        formRef.current,
+        emailJsConfig.publicKey,
+      );
+      formRef.current.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid gap-4 md:grid-cols-2">
+        <input
+          aria-label="Name"
+          name="from_name"
+          placeholder="Name"
+          required
+          className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+        />
+        <input
+          aria-label="Email"
+          name="from_email"
+          type="email"
+          placeholder="Email"
+          required
+          className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+        />
+      </div>
+      <input
+        aria-label="Subject"
+        name="subject"
+        placeholder="Subject"
+        required
+        className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+      />
+      <textarea
+        aria-label="Message"
+        name="message"
+        placeholder="Message"
+        required
+        rows={6}
+        className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+      />
+      {status === "success" && (
+        <p className="rounded-xl border border-primary/25 bg-secondary px-4 py-3 text-sm text-primary">
+          Your message has been sent successfully.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="rounded-xl border border-destructive/40 bg-background/40 px-4 py-3 text-sm text-destructive">
+          Message could not be sent. Please try again.
+        </p>
+      )}
+      <Button type="submit" variant="bio" size="xl" className="w-full" disabled={status === "sending"}>
+        <Send className="h-4 w-4" />
+        {status === "sending" ? "Sending..." : "Send Message"}
+      </Button>
+    </form>
   );
 }
 
@@ -713,29 +799,7 @@ function Index() {
             </div>
           </div>
           <GlassCard>
-            <form className="space-y-4">
-              <input
-                aria-label="Name"
-                placeholder="Name"
-                className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
-              />
-              <input
-                aria-label="Email"
-                type="email"
-                placeholder="Email"
-                className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
-              />
-              <textarea
-                aria-label="Message"
-                placeholder="Message"
-                rows={6}
-                className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
-              />
-              <Button type="button" variant="bio" size="xl" className="w-full">
-                <Send className="h-4 w-4" />
-                Send Message
-              </Button>
-            </form>
+            <ContactForm />
           </GlassCard>
         </div>
       </section>
