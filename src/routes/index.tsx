@@ -270,6 +270,35 @@ const services = [
   "Academic Writing Support",
 ];
 
+const extraCurricularActivities = [
+  "Campus Ambassador at Plasma Cell Research Center",
+  "Member at Theatre Idea",
+  "Member at Shangshaptak Theatre",
+  "Volunteer and Member of Nobojagoron Foundation, University of Rajshahi",
+  "Provided private tuition in science subjects to high school students",
+];
+
+const hobbies = ["Scientific Reading and Writing", "Team Sports", "Programming", "Singing", "Chess"];
+
+const trainings = [
+  {
+    title: "Basics of Pharmaceuticals",
+    provider: "Rajshahi University Biochemistry and Molecular Biology Alumni Association",
+    duration: "1 day · 31 May 2024",
+  },
+  {
+    title: "Bioinformatics for Computer-Aided Drug Design",
+    provider: "Panacea Research Center",
+    duration: "1 month · 3 May 2024 – 7 June 2024",
+  },
+  {
+    title:
+      "Bone Scanning, Radioimmunoassay, Chemiluminescent Immunoassay, Thyroid Scanning, and Renogram Techniques",
+    provider: "Institute of Nuclear Medicine and Allied",
+    duration: "7 days · 26 December 2023 – 1 January 2024",
+  },
+];
+
 function SectionHeading({
   eyebrow,
   title,
