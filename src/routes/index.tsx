@@ -581,18 +581,36 @@ function Index() {
           <SectionHeading
             eyebrow="About Me"
             title="Multidisciplinary biology, computation, and discovery."
-            text="I am based in Bogura, Bangladesh, and I am a research-focused bioinformatics enthusiast with a strong foundation in biochemistry and molecular biology."
+            text="I am a motivated and detail-oriented Life Science graduate with a strong foundation in biochemistry, molecular biology, and bioinformatics."
           />
           <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
             <GlassCard>
               <MapPin className="mb-5 h-8 w-8 text-bio-cyan" />
-              <h3 className="mb-4 text-2xl font-bold">Research objective</h3>
-              <p className="leading-8 text-muted-foreground">
-                My goal is to contribute to biomedical innovation by integrating biochemistry,
-                molecular biology, bioinformatics, and AI-driven drug discovery. I aim to grow as a
-                globally competent computational biology researcher and contribute to impactful,
-                interdisciplinary research that addresses real-world health challenges.
-              </p>
+              <h3 className="mb-4 text-2xl font-bold">About Me</h3>
+              <div className="space-y-5 leading-8 text-muted-foreground">
+                <p>
+                  My academic journey has been driven by a deep interest in understanding complex
+                  biological systems through both experimental and computational approaches.
+                </p>
+                <p>
+                  Currently, I am pursuing a Master’s degree in Biotechnology at BRAC University,
+                  where I am further strengthening my knowledge and research skills in advanced areas
+                  of life sciences. I am actively involved in bioinformatics and computer-aided drug
+                  design, with experience in microarray analysis, differential gene expression
+                  studies, and data-driven biological research.
+                </p>
+                <p>
+                  I have hands-on experience with various computational and bioinformatics tools such
+                  as R, Python, Cytoscape, PyRx, and STRING. My research interests include genomics,
+                  proteomics, systems biology, and the application of machine learning in biomedical
+                  research.
+                </p>
+                <p>
+                  My long-term goal is to pursue a PhD in the USA, where I aim to advance my
+                  expertise in molecular and computational biology and contribute to innovative
+                  research addressing global health challenges.
+                </p>
+              </div>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Detail-oriented", "Research-driven", "Multidisciplinary thinker"].map(
                   (trait) => (
