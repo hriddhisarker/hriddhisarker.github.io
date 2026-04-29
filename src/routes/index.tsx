@@ -575,11 +575,11 @@ function Index() {
           />
           <div>
             <GlassCard className="w-full">
-              <div className="grid gap-6 lg:grid-cols-[14rem_1fr] lg:items-start">
-                <div>
-                  <Dna className="mb-5 h-8 w-8 text-bio-cyan" />
-                  <h3 className="text-2xl font-bold">About Me</h3>
-                </div>
+              <div className="mb-6 flex items-center gap-4">
+                <Dna className="h-8 w-8 text-bio-cyan" />
+                <h3 className="text-2xl font-bold">About Me</h3>
+              </div>
+              <div className="grid gap-6 lg:grid-cols-[1fr]">
                 <div className="space-y-5 text-justify leading-8 text-muted-foreground">
                 <p>
                   My academic journey has been driven by a deep interest in understanding complex
