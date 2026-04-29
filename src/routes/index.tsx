@@ -799,29 +799,7 @@ function Index() {
             </div>
           </div>
           <GlassCard>
-            <form className="space-y-4">
-              <input
-                aria-label="Name"
-                placeholder="Name"
-                className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
-              />
-              <input
-                aria-label="Email"
-                type="email"
-                placeholder="Email"
-                className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
-              />
-              <textarea
-                aria-label="Message"
-                placeholder="Message"
-                rows={6}
-                className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
-              />
-              <Button type="button" variant="bio" size="xl" className="w-full">
-                <Send className="h-4 w-4" />
-                Send Message
-              </Button>
-            </form>
+            <ContactForm />
           </GlassCard>
         </div>
       </section>
