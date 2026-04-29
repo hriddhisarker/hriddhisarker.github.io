@@ -575,9 +575,9 @@ function Index() {
           />
           <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
             <GlassCard>
-              <MapPin className="mb-5 h-8 w-8 text-bio-cyan" />
+              <Dna className="mb-5 h-8 w-8 text-bio-cyan" />
               <h3 className="mb-4 text-2xl font-bold">About Me</h3>
-              <div className="space-y-5 leading-8 text-muted-foreground">
+              <div className="space-y-5 text-justify leading-8 text-muted-foreground">
                 <p>
                   My academic journey has been driven by a deep interest in understanding complex
                   biological systems through both experimental and computational approaches.
