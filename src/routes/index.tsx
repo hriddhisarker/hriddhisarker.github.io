@@ -316,6 +316,84 @@ function GlassCard({
   );
 }
 
+function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!formRef.current) return;
+
+    setStatus("sending");
+
+    try {
+      emailjs.init({ publicKey: emailJsConfig.publicKey });
+      await emailjs.sendForm(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        formRef.current,
+        emailJsConfig.publicKey,
+      );
+      formRef.current.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  return (
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+      <div className="grid gap-4 md:grid-cols-2">
+        <input
+          aria-label="Name"
+          name="from_name"
+          placeholder="Name"
+          required
+          className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+        />
+        <input
+          aria-label="Email"
+          name="from_email"
+          type="email"
+          placeholder="Email"
+          required
+          className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+        />
+      </div>
+      <input
+        aria-label="Subject"
+        name="subject"
+        placeholder="Subject"
+        required
+        className="h-12 w-full rounded-xl border border-input bg-background/40 px-4 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+      />
+      <textarea
+        aria-label="Message"
+        name="message"
+        placeholder="Message"
+        required
+        rows={6}
+        className="w-full resize-none rounded-xl border border-input bg-background/40 px-4 py-3 text-foreground outline-none transition placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/30"
+      />
+      {status === "success" && (
+        <p className="rounded-xl border border-primary/25 bg-secondary px-4 py-3 text-sm text-primary">
+          Your message has been sent successfully.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="rounded-xl border border-destructive/40 bg-background/40 px-4 py-3 text-sm text-destructive">
+          Message could not be sent. Please try again.
+        </p>
+      )}
+      <Button type="submit" variant="bio" size="xl" className="w-full" disabled={status === "sending"}>
+        <Send className="h-4 w-4" />
+        {status === "sending" ? "Sending..." : "Send Message"}
+      </Button>
+    </form>
+  );
+}
+
 function Index() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
