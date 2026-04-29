@@ -575,7 +575,7 @@ function Index() {
           />
           <div>
             <GlassCard className="w-full">
-              <div className="mb-6 flex items-center gap-4">
+              <div className="mb-6 flex items-center justify-center gap-4">
                 <Dna className="h-8 w-8 text-bio-cyan" />
                 <h3 className="text-2xl font-bold">About Me</h3>
               </div>
