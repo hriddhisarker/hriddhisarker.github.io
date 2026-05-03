@@ -213,6 +213,17 @@ const publications = [
       "Publisher: Elsevier. Equal contribution as first author in a computational study identifying next-generation GSK-3β inhibitor candidates for brain disorders.",
     doi: "https://doi.org/10.1016/j.compbiolchem.2025.108860",
   },
+  {
+    badge: "Digital Discovery · IF 5.6 · Scopus",
+    title:
+      "Identification of Multi-Transcriptomic Prognostic Biomarkers to Explore Natural Therapeutics for Lung Cancer Integrating Machine Learning",
+    authors:
+      "Md Ahad Ali, Hriddhi Sarker, Marguba Kamrun, Humaira Sheikh, Bilkis Shifa, Siam Ahmed, Tarikul Islam, Sujoy Banik, Neeraj Kumar",
+    journal: "Digital Discovery, 2025",
+    summary:
+      "Multi-transcriptomic prognostic biomarker identification for lung cancer with natural therapeutic exploration via integrated machine learning.",
+    doi: "https://doi.org/10.1039/d6dd00045b",
+  },
 ];
 
 const projects = [
