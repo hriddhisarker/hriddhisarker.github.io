@@ -483,35 +483,51 @@ function ContactForm() {
   );
 }
 
+const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
+  { label: "Experience", href: "#research" },
+  { label: "Skills", href: "#skills" },
+  { label: "Publications", href: "#publications" },
+  { label: "Projects", href: "#projects" },
+  { label: "Conferences", href: "#conferences" },
+  { label: "Services", href: "#services" },
+  { label: "Activities", href: "#activities" },
+  { label: "Contact", href: "#contact" },
+];
+
 function Index() {
   return (
-    <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <section id="home" className="relative bg-hero-bio">
-        <MolecularBackdrop />
-        <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-6 md:px-8">
-          <a href="#home" className="flex items-center gap-3 font-display text-lg font-bold">
+    <main className="min-h-screen overflow-hidden bg-background text-foreground scroll-smooth">
+      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+          <a href="#home" className="flex items-center gap-3 font-display text-lg font-bold shrink-0">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-bio text-primary-foreground shadow-bio">
               <Dna className="h-5 w-5" />
             </span>
-            Hriddhi Sarker
+            <span className="hidden sm:inline">Hriddhi Sarker</span>
           </a>
-          <div className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
-            {["About", "Research", "Skills", "Publications", "Contact"].map((item) => (
+          <div className="flex items-center gap-5 overflow-x-auto text-sm text-muted-foreground lg:gap-6">
+            {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="transition hover:text-primary"
+                key={item.label}
+                href={item.href}
+                className="whitespace-nowrap transition hover:text-primary"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
-          <Button asChild variant="bioOutline" size="sm">
+          <Button asChild variant="bioOutline" size="sm" className="hidden md:inline-flex shrink-0">
             <a href="mailto:hriddhisarkerborno@gmail.com">Collaborate</a>
           </Button>
         </nav>
+      </header>
 
-        <div className="relative z-10 mx-auto grid min-h-[calc(100vh-88px)] max-w-7xl items-center gap-12 px-5 pb-16 pt-6 md:grid-cols-[1.05fr_.95fr] md:px-8">
+      <section id="home" className="relative flex min-h-screen items-center bg-hero-bio scroll-mt-20">
+        <MolecularBackdrop />
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-[1.05fr_.95fr] md:px-8">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-surface px-4 py-2 text-sm text-bio-cyan backdrop-blur">
               <Sparkles className="h-4 w-4" /> Bioinformatics Researcher | Computational Drug Design
@@ -577,7 +593,7 @@ function Index() {
         </a>
       </section>
 
-      <section id="about" className="px-5 py-24 md:px-8">
+      <section id="about" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div>
             <GlassCard className="w-full">
@@ -628,7 +644,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="education" className="bg-surface px-5 py-24 md:px-8">
+      <section id="education" className="flex min-h-screen items-center bg-surface px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Education" title="Academic foundation in life sciences." />
           <div className="grid gap-4 md:grid-cols-2">
@@ -655,7 +671,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="research" className="px-5 py-24 md:px-8">
+      <section id="research" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Experience"
@@ -713,7 +729,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="skills" className="px-5 py-24 md:px-8">
+      <section id="skills" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Skills & Expertise"
@@ -749,7 +765,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="publications" className="bg-surface px-5 py-24 md:px-8">
+      <section id="publications" className="flex min-h-screen items-center bg-surface px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Publications" title="Peer-reviewed research work." />
           <div className="grid gap-6 lg:grid-cols-2">
@@ -786,7 +802,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-8">
+      <section id="projects" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Projects / Research Focus"
@@ -812,7 +828,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface px-5 py-24 md:px-8">
+      <section id="conferences" className="flex min-h-screen items-center bg-surface px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Conferences" title="Presentations and academic engagement." />
           <div className="grid gap-4 md:grid-cols-2">
@@ -838,7 +854,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-8">
+      <section id="services" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Services" title="Collaborative offerings and expertise." />
           <GlassCard>
@@ -860,7 +876,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-8">
+      <section id="activities" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Activities & Training" title="Workshops, service, and interests." />
           <div className="grid gap-6 lg:grid-cols-3">
@@ -907,7 +923,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="px-5 py-24 md:px-8">
+      <section id="contact" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.9fr_1.1fr]">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-bio-cyan">
