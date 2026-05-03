@@ -879,16 +879,14 @@ function Index() {
             <GlassCard>
               <Sparkles className="mb-5 h-8 w-8 text-bio-cyan" />
               <h3 className="text-2xl font-bold">Hobbies and Interests</h3>
-              <div className="mt-6 flex flex-wrap gap-2">
+              <ul className="mt-6 space-y-3">
                 {hobbies.map((hobby) => (
-                  <span
-                    key={hobby}
-                    className="rounded-full border border-primary/25 bg-surface px-3 py-1 text-xs text-primary"
-                  >
-                    {hobby}
-                  </span>
+                  <li key={hobby} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                    <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-bio-green" />
+                    <span>{hobby}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </GlassCard>
             <GlassCard>
               <BookOpen className="mb-5 h-8 w-8 text-bio-cyan" />
