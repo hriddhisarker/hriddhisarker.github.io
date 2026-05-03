@@ -813,34 +813,37 @@ function Index() {
       </section>
 
       <section className="bg-surface px-5 py-24 md:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_.9fr]">
-          <div>
-            <SectionHeading eyebrow="Conferences" title="Presentations and academic engagement." />
-            <div className="grid gap-4">
-              {conferences.map((conference) => (
-                <GlassCard key={conference.title}>
-                  <Award className="mb-4 h-7 w-7 text-bio-amber" />
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">
-                    {conference.role}
-                  </p>
-                  <h3 className="mt-3 text-xl font-bold leading-snug">{conference.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-primary">{conference.authors}</p>
-                  <p className="mt-4 text-sm leading-6 text-muted-foreground">{conference.event}</p>
-                  {conference.doi && (
-                    <Button asChild variant="bioOutline" size="sm" className="mt-5">
-                      <a href={conference.doi} target="_blank" rel="noreferrer">
-                        DOI <ExternalLink className="h-3 w-3" />
-                      </a>
-                    </Button>
-                  )}
-                </GlassCard>
-              ))}
-            </div>
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Conferences" title="Presentations and academic engagement." />
+          <div className="grid gap-4 md:grid-cols-2">
+            {conferences.map((conference) => (
+              <GlassCard key={conference.title}>
+                <Award className="mb-4 h-7 w-7 text-bio-amber" />
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-bio-green">
+                  {conference.role}
+                </p>
+                <h3 className="mt-3 text-xl font-bold leading-snug">{conference.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-primary">{conference.authors}</p>
+                <p className="mt-4 text-sm leading-6 text-muted-foreground">{conference.event}</p>
+                {conference.doi && (
+                  <Button asChild variant="bioOutline" size="sm" className="mt-5">
+                    <a href={conference.doi} target="_blank" rel="noreferrer">
+                      DOI <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </Button>
+                )}
+              </GlassCard>
+            ))}
           </div>
-          <GlassCard className="self-center">
+        </div>
+      </section>
+
+      <section className="px-5 py-24 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading eyebrow="Services" title="Collaborative offerings and expertise." />
+          <GlassCard>
             <BriefcaseBusiness className="mb-5 h-8 w-8 text-bio-cyan" />
-            <h2 className="text-3xl font-bold">Services</h2>
-            <div className="mt-6 grid gap-3">
+            <div className="grid gap-3 md:grid-cols-2">
               {services.map((service) => (
                 <div
                   key={service}
