@@ -828,7 +828,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface px-5 py-24 md:px-8">
+      <section id="conferences" className="flex min-h-screen items-center bg-surface px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Conferences" title="Presentations and academic engagement." />
           <div className="grid gap-4 md:grid-cols-2">
@@ -854,7 +854,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-8">
+      <section id="services" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Services" title="Collaborative offerings and expertise." />
           <GlassCard>
@@ -876,7 +876,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-8">
+      <section id="activities" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Activities & Training" title="Workshops, service, and interests." />
           <div className="grid gap-6 lg:grid-cols-3">
