@@ -593,7 +593,7 @@ function Index() {
         </a>
       </section>
 
-      <section id="about" className="px-5 py-24 md:px-8">
+      <section id="about" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div>
             <GlassCard className="w-full">
@@ -644,7 +644,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="education" className="bg-surface px-5 py-24 md:px-8">
+      <section id="education" className="flex min-h-screen items-center bg-surface px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Education" title="Academic foundation in life sciences." />
           <div className="grid gap-4 md:grid-cols-2">
@@ -671,7 +671,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="research" className="px-5 py-24 md:px-8">
+      <section id="research" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Experience"
@@ -729,7 +729,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="skills" className="px-5 py-24 md:px-8">
+      <section id="skills" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Skills & Expertise"
@@ -765,7 +765,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="publications" className="bg-surface px-5 py-24 md:px-8">
+      <section id="publications" className="flex min-h-screen items-center bg-surface px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading eyebrow="Publications" title="Peer-reviewed research work." />
           <div className="grid gap-6 lg:grid-cols-2">
@@ -802,7 +802,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="px-5 py-24 md:px-8">
+      <section id="projects" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             eyebrow="Projects / Research Focus"
@@ -923,7 +923,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="px-5 py-24 md:px-8">
+      <section id="contact" className="flex min-h-screen items-center px-5 py-24 scroll-mt-20 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[.9fr_1.1fr]">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-bio-cyan">
