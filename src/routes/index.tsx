@@ -224,6 +224,17 @@ const publications = [
       "Multi-transcriptomic prognostic biomarker identification for lung cancer with natural therapeutic exploration via integrated machine learning.",
     doi: "https://doi.org/10.1039/d6dd00045b",
   },
+  {
+    badge: "PLOS ONE · IF 2.9 · CiteScore 5.3",
+    title:
+      "Multi-omics and Pan-Cancer Analysis Revealed Common Molecular Signatures to Disclose Multitargeted Anticancer Agents Through Network Pharmacology Approach",
+    authors:
+      "Hriddhi Sarker, Farhad Bin Farid, Marguba Kamrun, Esha Masud, Asif Ahmed, Mamun Miah, Neladre Shaker Roy, Neeraj Kumar, Md Ahad Ali",
+    journal: "PLOS ONE, 2026 (Accepted)",
+    summary:
+      "Multi-omics and pan-cancer analysis uncovering common molecular signatures to identify multitargeted anticancer agents through network pharmacology.",
+    doi: "https://doi.org/10.1371/journal.pone.0350614",
+  },
 ];
 
 const projects = [
