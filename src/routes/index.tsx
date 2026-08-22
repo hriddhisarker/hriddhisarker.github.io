@@ -235,6 +235,39 @@ const publications = [
       "Multi-omics and pan-cancer analysis uncovering common molecular signatures to identify multitargeted anticancer agents through network pharmacology.",
     doi: "https://doi.org/10.1371/journal.pone.0350614",
   },
+  {
+    badge: "Microplastics (MDPI) · IF 5.1 · CiteScore 6.8",
+    title:
+      "Microplastics as Emerging One Health Threats: A Molecular and Ecotoxicological Review Across Aquatic Life with Emphasis on Fish",
+    authors:
+      "Hriddhi Sarker, Goutam Saha, Awnon Bhowmik, Amlan Ganguly",
+    journal: "Microplastics (MDPI), 2026",
+    summary:
+      "Scopus-indexed review exploring microplastics as One Health threats across aquatic ecosystems, with a molecular and ecotoxicological focus on fish.",
+    doi: "https://doi.org/10.3390/microplastics5020102",
+  },
+  {
+    badge: "J. Genet. Eng. Biotechnol. · IF 3.6 · CiteScore 6.3",
+    title:
+      "Integrative Multi-Transcriptomics and Network Pharmacology Reveal Natural Therapeutics as Anti-Cancer Agents Targeting AURKA for Ovarian Cancer Treatment",
+    authors:
+      "Hriddhi Sarker, Md. Ahad Ali, Md Fakhrul Islam, Enam Ahmed, Amlan Ganguly, Md. Nazmul Hasan Zilani",
+    journal: "Journal of Genetic Engineering and Biotechnology, 2026",
+    summary:
+      "Scopus-indexed integrative multi-transcriptomics and network pharmacology study identifying natural therapeutics targeting AURKA for ovarian cancer treatment.",
+    doi: "https://doi.org/10.1016/j.jgeb.2026.100745",
+  },
+  {
+    badge: "Microplastics (MDPI) · IF 4.8 · CiteScore 7.7",
+    title:
+      "Microplastics Across the Human Body: Occurrence, Detection Methodologies, and Distribution in Human Tissues, Organs, and Biological Fluids",
+    authors:
+      "Hriddhi Sarker, Umar Hasnain Monabbi, Goutam Saha, B M Rabby Hossain",
+    journal: "Microplastics (MDPI), 2026, 5(3), 157",
+    summary:
+      "Scopus-indexed review on the occurrence, detection methodologies, and distribution of microplastics across human tissues, organs, and biological fluids.",
+    doi: "https://doi.org/10.3390/microplastics5030157",
+  },
 ];
 
 const projects = [
